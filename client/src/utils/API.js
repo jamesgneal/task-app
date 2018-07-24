@@ -1,19 +1,21 @@
 import axios from "axios";
 
 export default {
-    // monitor output
-    newTask: (taskTitle, taskDetails, taskDueDate) => {
-        console.log (`Title: ${taskTitle}\nDetails: ${taskDetails}\nDue: ${taskDueDate}`)
-    
-    // format data for model
+  newTask: (taskTitle, taskDetails, taskDueDate, taskOwner) => {
     let taskObj = {
-        title: taskTitle,
-        details: taskDetails,
-        due: taskDueDate,
-        completed: false
-    }
+      title: taskTitle,
+      details: taskDetails,
+      due: taskDueDate,
+      user: taskOwner,
+      completed: false
+    };
+    return axios.post(`/api/tasks`, taskObj);
+  },
 
-    // pass the formatted data to the server
-    return axios.post(`/api/tasks`, taskObj)
-    }
+  getTasks: (username) => {
+      let userObj = {
+          user: username
+      }
+      return axios.post("/api/tasks/user", userObj)
+  }
 };
