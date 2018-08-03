@@ -1,3 +1,15 @@
+# Task App _WIP_
+Live: _coming soon_
+### Challenge - Recreate the Google Task app for iOS/Android as a web app
+Work in progress. I'll update the tech used and challenges faced when I'm done-ish.
+#### Skills Used
+1. React
+1. Passport
+1. MongoDB
+1. Express server
+1. Node
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
